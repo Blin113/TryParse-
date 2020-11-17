@@ -16,36 +16,32 @@ namespace TryParse__
 
                 if (!int.TryParse(Console.ReadLine(), out x))
                 {
-                    Console.WriteLine("inget tal");
+                    Console.WriteLine("är inget tal");
                     Console.ReadKey();
                     Console.Clear();
                 }
                 else
                 {
-                    Console.WriteLine("talet är: " + x); 
+                    Console.WriteLine("talet är: " + x);
                     Console.ReadKey();
                     Console.Clear();
                 }
-            }        
+            }
         }
 
         public static bool TryParse(string s, out int x)
         {
-            x = int.Parse(s);
-            return true;
-
-            /*
             try
             {
                 x = int.Parse(s);
                 return true;
             }
-            catch
+            catch(Exception a)
             {
+                Console.WriteLine("error: " + a);
                 x = 0;
                 return false;
             }
-            */
         }
     }
 }
