@@ -14,7 +14,7 @@ namespace TryParse__
 
                 Console.WriteLine("skriv ett tal: ");
 
-                if (!int.TryParse(Console.ReadLine(), out x))
+                if (!TryParse(Console.ReadLine(), out x))
                 {
                     Console.WriteLine("är inget tal");
                     Console.ReadKey();
@@ -36,9 +36,9 @@ namespace TryParse__
                 x = int.Parse(s);
                 return true;
             }
-            catch(Exception a)
+            catch (Exception a)
             {
-                Console.WriteLine("error: " + a);
+                Console.WriteLine("error: " + a.Message);
                 x = 0;
                 return false;
             }
